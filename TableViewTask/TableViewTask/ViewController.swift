@@ -23,12 +23,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        while cellContent > 0 {
             cell.textLabel?.text = String(cellContent)
             cellContent -= 1
-            return cell
-        }
-        
+            
+        //OR
+        //cell.textLabel?.text = String(indexPath.row += 1)
         return cell
         
     }
