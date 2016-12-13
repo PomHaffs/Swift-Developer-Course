@@ -22,20 +22,40 @@ import UIKit
 //}
 
 //2. Add one to each value in array
-var i = 0
+//var i = 0
 
-var array = [7, 23, 98, 1, 0, 763]
+//var array = [7, 23, 98, 1, 0, 763]
+//
+//array.count
+//
+//while i < array.count {
+//    //array[i] = array[i] + 1
+//    
+//    array[i] += 1
+//    i += 1
+//}
+//print(array)
 
-array.count
 
-while i < array.count {
-    //array[i] = array[i] + 1
-    
-    array[i] += 1
-    i += 1
+let number = 1
+var isPrime = true
+var i = 2
+
+if number == 1 {
+    isPrime = false
 }
-print(array)
 
+while i < number {
+    
+        if number % i == 0 {
+            isPrime = false
+        }
+    
+        i += 1
+    
+}
+
+print(isPrime)
 
 
 
