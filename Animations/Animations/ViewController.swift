@@ -10,8 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var image: UIImageView!
+    //Basic start and end and the duration
+    @IBAction func fadeIn(_ sender: Any) {
+        
+        image.alpha = 0
+        
+        UIView.animate(withDuration: 3, animations: {
+        
+            self.image.alpha = 1
+            
+        })
+    }
     
+    @IBAction func slideIn(_ sender: Any) {
+    }
+    
+    @IBAction func grow(_ sender: Any) {
+    }
+  
+    
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var button: UIButton!
     
     var count = 0
@@ -38,11 +56,13 @@ class ViewController: UIViewController {
             
             button.setTitle("Play Animation", for: [])
             timer.invalidate()
+            isPlaying = false
             
         } else {
             
             button.setTitle("Stop Animation", for: [])
-          timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(ViewController.animate) , userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(ViewController.animate) , userInfo: nil, repeats: true)
+            isPlaying = true
             
         }
         
