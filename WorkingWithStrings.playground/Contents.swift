@@ -19,4 +19,17 @@ newTypeString.substring(to: 5)
 newTypeString.substring(from: 5)
 
 //Get 'monkey'
-NSString(string: newTypeString.substring(from: 7)).substring(to: 4)
+NSString(string: newTypeString.substring(from: 7)).substring(to: 6)
+
+newTypeString.substring(with: NSRange(location: 7, length: 6))
+
+if newTypeString.contains("monkey") {
+    print("newTypeString contains Monkey!")
+}
+
+//into words
+newTypeString.components(separatedBy: " ")
+
+newTypeString.lowercased
+newTypeString.uppercased
+newTypeString.capitalized
