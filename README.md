@@ -7,7 +7,9 @@
 - CCA Swift Level 1 certificate - passed - 05/12/16
 - CCA Swift Level 2 certificate - 
 
-#Content:
+#Content
+- Downloading Web Content
+- Advanced Manipulating Strings
 - Storing Perminant Data - including basic data storage app
 - Table Views - including basic multiplication app
 - Nav Bars
