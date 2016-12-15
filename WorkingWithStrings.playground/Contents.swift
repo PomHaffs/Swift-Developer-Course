@@ -33,3 +33,32 @@ newTypeString.components(separatedBy: " ")
 newTypeString.lowercased
 newTypeString.uppercased
 newTypeString.capitalized
+
+
+var name = "San Francisco"
+name.trimmingCharacters(in: .whitespaces)
+
+name.replacingOccurrences(of: " ", with: "-").capitalized
+
+                            //REALLY IMPORTANT!!!!
+
+//ADD ' \ ' to allow for "
+var searchLocationData = "</div></a><p class=\"summary\"><b>London 1 &ndash; 3 Day Weather Forecast Summary:</b><span class=\"read-more-small\"><span class=\"read-more-content\"> <span class=\"phrase\">Mostly dry. Mild temperatures (max 10&deg;C on Thu morning, min 5&deg;C on Wed night). Winds decreasing (fresh winds from the SSE on Wed night, calm by Fri night).</span>"
+
+
+var new = searchLocationData.components(separatedBy: "phrase\">")
+print(new)
+
+var final = new[1].components(separatedBy: "</span>")
+print(final[0])
+
+
+
+
+
+
+
+
+
+
+
