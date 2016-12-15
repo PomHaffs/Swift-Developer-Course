@@ -37,7 +37,14 @@ class ViewController: UIViewController {
     
     @IBAction func grow(_ sender: Any) {
         
-        image.size
+        //x0 y0 is top left
+        image.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        
+        UIView.animate(withDuration: 3, animations: {
+        
+        self.image.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        
+        })
     }
   
     
