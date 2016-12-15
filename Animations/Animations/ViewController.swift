@@ -23,9 +23,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func slideIn(_ sender: Any) {
+        
+        
+        image.center = CGPoint(x: image.center.x - 500, y: image.center.y)
+        
+        UIView.animate(withDuration: 3, animations: {
+        
+        self.image.center = CGPoint(x: self.image.center.x + 500, y: self.image.center.y)
+        
+        })
+        
     }
     
     @IBAction func grow(_ sender: Any) {
+        
+        image.size
     }
   
     
@@ -54,13 +66,13 @@ class ViewController: UIViewController {
         
         if isPlaying {
             
-            button.setTitle("Play Animation", for: [])
+            button.setTitle("Play", for: [])
             timer.invalidate()
             isPlaying = false
             
         } else {
             
-            button.setTitle("Stop Animation", for: [])
+            button.setTitle("Paws", for: [])
             timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(ViewController.animate) , userInfo: nil, repeats: true)
             isPlaying = true
             
