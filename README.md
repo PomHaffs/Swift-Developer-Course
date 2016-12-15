@@ -8,6 +8,7 @@
 - CCA Swift Level 2 certificate - 
 
 #Content
+- Animations - Gifs and creation
 - Downloading Web Content
 - Advanced Manipulating Strings
 - Storing Perminant Data - including basic data storage app
