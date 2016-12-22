@@ -8,8 +8,8 @@
 - CCA Swift Level 2 certificate - 
 
 #Content
-- 
-- Intergrating Maps
+- Geolocation - finding a user
+- Intergrating Maps - including annotating
 - Animations - Gifs and creation
 - Downloading Web Content
 - Advanced Manipulating Strings
