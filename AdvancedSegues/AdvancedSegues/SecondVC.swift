@@ -11,10 +11,13 @@ import UIKit
 class SecondVC: UIViewController {
     
     var userName = "Haffs"
+    var activeRow = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(globalVarible)
+        print(activeRow)
         // Do any additional setup after loading the view.
     }
 
