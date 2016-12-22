@@ -12,6 +12,7 @@
 		FECF16891E0B4A4300CA7715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECF16871E0B4A4300CA7715 /* Main.storyboard */; };
 		FECF168B1E0B4A4300CA7715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECF168A1E0B4A4300CA7715 /* Assets.xcassets */; };
 		FECF168E1E0B4A4300CA7715 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECF168C1E0B4A4300CA7715 /* LaunchScreen.storyboard */; };
+		FECF16961E0B4AE000CA7715 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF16951E0B4AE000CA7715 /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FECF168A1E0B4A4300CA7715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FECF168D1E0B4A4300CA7715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FECF168F1E0B4A4300CA7715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECF16951E0B4AE000CA7715 /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FECF16831E0B4A4300CA7715 /* AppDelegate.swift */,
 				FECF16851E0B4A4300CA7715 /* ViewController.swift */,
+				FECF16951E0B4AE000CA7715 /* SecondVC.swift */,
 				FECF16871E0B4A4300CA7715 /* Main.storyboard */,
 				FECF168A1E0B4A4300CA7715 /* Assets.xcassets */,
 				FECF168C1E0B4A4300CA7715 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECF16861E0B4A4300CA7715 /* ViewController.swift in Sources */,
+				FECF16961E0B4AE000CA7715 /* SecondVC.swift in Sources */,
 				FECF16841E0B4A4300CA7715 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
