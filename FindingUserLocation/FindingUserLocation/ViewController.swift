@@ -40,19 +40,72 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         //below copied from previous thing.
         let userLocation: CLLocation = locations[0]
         
-        let latitude = userLocation.coordinate.latitude
-        let longitude = userLocation.coordinate.longitude
+//        let latitude = userLocation.coordinate.latitude
+//        let longitude = userLocation.coordinate.longitude
         
-        let latDelta: CLLocationDegrees = 0.05
-        let longDelta: CLLocationDegrees = 0.05
-
-        let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+//        let latDelta: CLLocationDegrees = 0.05
+//        let longDelta: CLLocationDegrees = 0.05
+//
+//        let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
+//        
+//        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
-        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//        let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+//        
+//        mapView.setRegion(region, animated: true)
         
-        let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+        //FIND ADDRESS
+        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
+            
+            if error != nil {
+                
+                print(error as? Any)
+            } else {
+                //might not give an address so ?
+                if let placemark = placemarks?[0] {
+                    //print(placemark)
+                    
+                    var subLocality = ""
+                    if placemark.subLocality != nil {
+                        subLocality = placemark.subLocality!
+                    }
+                    
+                    var subAdmin = ""
+                    if placemark.subAdministrativeArea != nil {
+                        subAdmin = placemark.subAdministrativeArea!
+                    }
+                    
+                    var subThoroughfare = ""
+                    if placemark.subThoroughfare != nil {
+                        subThoroughfare = placemark.subThoroughfare!
+                    }
+                    
+                    var thoroughfare = ""
+                    if placemark.thoroughfare != nil {
+                        thoroughfare = placemark.thoroughfare!
+                    }
+                   
+                    var postCode = ""
+                    if placemark.postalCode != nil {
+                        postCode = placemark.postalCode!
+                    }
+                    
+                    var country = ""
+                    if placemark.country != nil {
+                        country = placemark.country!
+                    }
+                    
+                    
+                print(subThoroughfare + thoroughfare + "\n" + subLocality + "\n" + subAdmin + "\n" + postCode + "\n" + country)
+                    
+                }
+            
+            }
+            
+            
+        }
         
-        mapView.setRegion(region, animated: true)
+        
     }
 
 
